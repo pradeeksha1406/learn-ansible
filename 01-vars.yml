@@ -30,4 +30,5 @@
          msg: "{{ URL }}"
 - name: Demo on task level var
   hosts: localhost
-  roles: demo
+  roles:
+    - demo
