@@ -28,5 +28,3 @@
      - name: print a play variable
        ansible.builtin.debug:
          msg: "{{ URL }}"
-       vars:
-         URL: play.example.com
