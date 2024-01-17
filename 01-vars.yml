@@ -7,19 +7,19 @@
 
 - name: Demo on variables
   hosts: localhost
-  var:
+  vars:
     URL: example.com
   tasks:
-  - name: print variables
-    ansible.builtin.debug:
-      msg:"{{ URL }}"
+     - name: print variables
+       ansible.builtin.debug:
+         msg:"{{ URL }}"
 #hhjhjjh
 #hjhjhj
-  - name: Demo on task level var
-    hosts: localhost
-    tasks:
-    - name: print a variable
-      ansible.builtin.debug:
-        msg:"{{ URL }}"
-      var:
-        URL: example.com
+- name: Demo on task level var
+  hosts: localhost
+  tasks:
+     - name: print a variable
+       ansible.builtin.debug:
+         msg:"{{ URL }}"
+       var:
+          URL: example.com
