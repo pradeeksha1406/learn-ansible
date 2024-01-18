@@ -6,8 +6,8 @@
         msg: Apple price is -$1
       when: fruit == "Apple"
 
-#    - name: Print mango Price
-#      ansible.builtin.debug:
-#        msg: Mango price is -$2
-#      When: fruit == "mango"
-#
+    - name: Print mango Price
+      ansible.builtin.debug:
+        msg: Mango price is -$2
+      When: fruit == "mango"
+
