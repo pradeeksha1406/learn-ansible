@@ -10,3 +10,4 @@
       ansible.builtin.debug:
         msg: Mango price is -$2
       When: fruit == "mango"
+
