@@ -4,10 +4,10 @@
   - name: Get memory
     ansible.builtin.shell: free | grep Mem |xargs
     register: free
-
-  - name: print free variables
-    ansible.builtin.debug:
-      msg: "{{free}}"
+#
+#  - name: print free variables
+#    ansible.builtin.debug:
+#      msg: "{{free}}"
 
 
 
