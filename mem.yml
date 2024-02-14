@@ -7,7 +7,7 @@
 
   - name: print free variables
     ansible.builtin.debug:
-      msg: "{{free.stdout | spilt("  ")}}"
+      msg: "{{free.stdout | spilt(' ')}}"
 
 
 
