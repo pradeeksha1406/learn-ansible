@@ -5,9 +5,13 @@
     ansible.builtin.shell: free | grep Mem |xargs
     register: free
 
+  - name: set_fact
+    ansible.builtin.set_fact:
+     free: "{{free.stdout | split(' ')}}"
+
   - name: print free variables
     ansible.builtin.debug:
-      msg: "{{free.stdout | split(' ')|[0]}}"
+      msg: "{{free}}"
 
 
 
