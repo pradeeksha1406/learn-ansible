@@ -22,15 +22,15 @@
 
 
 
-#  - name: set_fact
-#    ansible.builtin.set_fact:
-#      total: "{{ free[1] }}"
-#      free: "{{ free[3] }}"
-#
-#
-#  - name: print free output
-#    ansible.builtin.debug:
-#      msg: "{{ free|int / total|int }}"
+  - name: set_fact
+    ansible.builtin.set_fact:
+      total: "{{ free[1] }}"
+      free: "{{ free[3] }}"
+
+
+  - name: print free output
+    ansible.builtin.debug:
+      msg: "{{ free|int / total|int }}"
 
 
 
