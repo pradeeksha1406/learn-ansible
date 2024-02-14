@@ -4,10 +4,10 @@
   - name: Get memory
     ansible.builtin.shell: free | grep Mem |xargs
     register: free
-#
-#  - name: print free variables
-#    ansible.builtin.debug:
-#      msg: "{{free}}"
+
+  - name: print free variables
+    ansible.builtin.debug:
+      msg: "{{free}}"
 
 
 
@@ -15,15 +15,21 @@
   - name: set_fact
     ansible.builtin.set_fact:
      free: "{{free.stdout | split(' ')}}"
-
   - name: print free variables
     ansible.builtin.debug:
+      free: "{{free[1]}}"
+
+
+
+  - name: set_fact
+    ansible.builtin.set_fact:
       total: "{{ free[1] }}"
-#      free: "{{ free[3] }}"
-#
-#  - name: print free output
-#    ansible.builtin.debug:
-#      msg: "{{ free|int / total|int }}"
+      free: "{{ free[3] }}"
+
+
+  - name: print free output
+    ansible.builtin.debug:
+      msg: "{{ free|int / total|int }}"
 
 
 
