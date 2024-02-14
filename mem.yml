@@ -19,7 +19,7 @@
   - name: print free variables
     ansible.builtin.debug:
       total: "{{free[1]}}"
-      free: "{{free[2]}}"
+      free: "{{free[3]}}"
 
   - name: print free output
     ansible.builtin.debug:
