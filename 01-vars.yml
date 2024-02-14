@@ -5,30 +5,30 @@
        ansible.builtin.debug:
          msg: Hello printing
 
-#- name: Demo on variables
-#  hosts: localhost
-#  vars:
-#    URL: example.com
-#  tasks:
-#     - name: print variables
-#       ansible.builtin.debug:
-#         msg: "{{ URL }}"
-#
-#- name: Demo on task level var
-#  hosts: localhost
-#  vars:
-#    URL: play.example.com
-#  tasks:
-#     - name: print a variable
-#       ansible.builtin.debug:
-#         msg: "{{ URL }}"
-#       vars:
-#          URL: task.example.com
-#
-#     - name: print a play variable
-#       ansible.builtin.debug:
-#         msg: "{{ URL }}"
-#- name: Demo on roles level var
-#  hosts: localhost
-#  roles:
-#    - demo
+- name: Demo on variables
+  hosts: localhost
+  vars:
+    URL: example.com
+  tasks:
+     - name: print variables
+       ansible.builtin.debug:
+         msg: "{{ URL }}"
+
+- name: Demo on task level var
+  hosts: localhost
+  vars:
+    URL: play.example.com
+  tasks:
+     - name: print a variable
+       ansible.builtin.debug:
+         msg: "{{ URL }}"
+       vars:
+          URL: task.example.com
+
+     - name: print a play variable
+       ansible.builtin.debug:
+         msg: "{{ URL }}"
+- name: Demo on roles level var
+  hosts: localhost
+  roles:
+    - demo
