@@ -18,7 +18,12 @@
 
   - name: print free variables
     ansible.builtin.debug:
-      msg: "{{free[1]}}"
+      total: "{{free[1]}}"
+      free: "{{free[2]}}"
+
+  - name: print free output
+    ansible.output.debug:
+      msg: "{{free|int / total|int}}"
 
 
 
