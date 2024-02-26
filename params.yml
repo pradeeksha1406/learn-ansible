@@ -3,4 +3,4 @@
   tasks:
     - name: get a parameter from Parameter store
       ansible.builtin.debug:
-        msg: "{{ lookup('aws_ssm', 'Test', region='us-east-1', decrypt=False ) }}"
+        msg: "{{ lookup('aws_ssm', 'Test', region='us-east-1', decrypt=True ) }}"
